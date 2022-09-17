@@ -1,0 +1,38 @@
+{
+  "name": "vue3-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "dev": "vite --host",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.2.0",
+    "@capacitor/browser": "^4.0.1",
+    "@capacitor/core": "^4.2.0",
+    "@capacitor/ios": "^4.2.0",
+    "@mdi/font": "7.0.96",
+    "axios": "^0.27.2",
+    "qs": "^6.11.0",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.0",
+    "vue-router": "^4.1.1",
+    "vuetify": "^3.0.0-beta.11",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^4.2.0",
+    "@types/node": "^18.7.18",
+    "@types/webfontloader": "^1.0.0",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "autoprefixer": "^10.4.11",
+    "sass": "^1.54.9",
+    "typescript": "^4.5.4",
+    "vite": "^3.1.1",
+    "vite-plugin-vuetify": "^1.0.0-alpha.0",
+    "vue-tsc": "^1.0.0-alpha.0"
+  },
+  "license": "MIT"
+}
