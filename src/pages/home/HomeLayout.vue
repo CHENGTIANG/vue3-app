@@ -60,7 +60,7 @@ export default {
 </script>
 <style scoped>
 .app-bar {
-  opacity: 0.8;
-  backdrop-filter: blur(8px);
+  background-color: rgba(var(--v-theme-background), 0.8) !important;
+  backdrop-filter: blur(12px);
 }
 </style>
