@@ -13,6 +13,7 @@ export default defineConfig({
       plugins: [autoprefixer],
     },
   },
+  base: "",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
