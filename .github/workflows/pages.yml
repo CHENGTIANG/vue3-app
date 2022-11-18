@@ -44,9 +44,9 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   # Deployment job
   deploy:
@@ -54,16 +54,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           path: ./
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./
-          destination_dir: ./
+          publish_dir: ./artifact
           allow_empty_commit: true
