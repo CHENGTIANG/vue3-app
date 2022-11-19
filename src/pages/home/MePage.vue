@@ -16,7 +16,7 @@
       </v-list-item>
     </v-list>
     <div class="pa-2">
-      <v-btn block>Sign Out</v-btn>
+      <v-btn block @click="$router.replace('/signin')">Sign Out</v-btn>
     </div>
   </div>
 </template>

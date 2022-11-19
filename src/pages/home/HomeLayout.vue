@@ -31,19 +31,19 @@
     <router-view></router-view>
   </v-main>
   <v-bottom-navigation grow class="safe-area-bottom-navigation">
-    <v-btn to="/home" color="primary">
+    <v-btn to="/home" color="primary" replace>
       <v-icon icon="mdi-home"></v-icon>
       <span>Home</span>
     </v-btn>
-    <v-btn to="/favorites" color="primary">
+    <v-btn to="/favorites" color="primary" replace>
       <v-icon icon="mdi-heart"></v-icon>
       <span>Favorites</span>
     </v-btn>
-    <v-btn to="/nearby" color="primary">
+    <v-btn to="/nearby" color="primary" replace>
       <v-icon icon="mdi-map-marker"></v-icon>
       <span>Nearby</span>
     </v-btn>
-    <v-btn to="/me" color="primary">
+    <v-btn to="/me" color="primary" replace>
       <v-icon icon="mdi-account"></v-icon>
       <span>Me</span>
     </v-btn>
