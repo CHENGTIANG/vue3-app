@@ -26,28 +26,19 @@
   </v-theme-provider>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "App",
-  inject: ["loader", "error"],
-  data() {
-    return {
-      theme: "dark",
-    };
-  },
-  methods: {
-    toggleDarkTheme(value) {
-      this.theme = value ? "dark" : "light";
-    },
-  },
-  created() {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    this.toggleDarkTheme(prefersDark.matches);
-    prefersDark.addEventListener("change", (mediaQuery) =>
-      this.toggleDarkTheme(mediaQuery.matches)
-    );
-  },
+<script lang="ts" setup>
+import { ref, inject, onMounted } from "vue";
+const theme = ref("light");
+function toggleDarkTheme(value: boolean) {
+  theme.value = value ? "dark" : "light";
+}
+onMounted(() => {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+  toggleDarkTheme(prefersDark.matches);
+  prefersDark.addEventListener("change", (mediaQuery) =>
+    toggleDarkTheme(mediaQuery.matches)
+  );
 });
+const loader: any = inject("loader");
+const error: any = inject("error");
 </script>

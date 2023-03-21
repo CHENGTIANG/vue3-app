@@ -49,14 +49,9 @@
     </v-btn>
   </v-bottom-navigation>
 </template>
-<script lang="ts">
-export default {
-  data() {
-    return {
-      drawer: false,
-    };
-  },
-};
+<script lang="ts" setup>
+import { ref } from "vue";
+const drawer = ref(false);
 </script>
 <style scoped>
 .app-bar {

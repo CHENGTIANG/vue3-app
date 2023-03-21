@@ -38,25 +38,20 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      items: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        },
-      ],
-    };
+<script lang="ts" setup>
+import { ref } from "vue";
+const items = ref([
+  {
+    src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
   },
-};
+  {
+    src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+  },
+  {
+    src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+  },
+  {
+    src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+  },
+]);
 </script>
