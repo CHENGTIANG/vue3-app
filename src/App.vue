@@ -5,7 +5,7 @@
       <v-overlay
         attach="body"
         z-index="2500"
-        :model-value="loader.loading"
+        :model-value="loadingData.loading"
         persistent
         contained
         class="align-center justify-center"
@@ -15,19 +15,27 @@
             class="d-flex flex-column align-center justify-center pa-6 pb-4"
           >
             <v-progress-circular indeterminate size="36"></v-progress-circular>
-            <span class="mt-2">{{ loader.message }}</span>
+            <span class="mt-2">{{ loadingData.message }}</span>
           </v-card-text>
         </v-card>
       </v-overlay>
-      <v-snackbar v-model="error.snackbar">
-        {{ error.message }}
+      <v-snackbar
+        v-for="message in messagesData"
+        :model-value="true"
+        :timeout="-1"
+        :location="message.value.location"
+        :color="message.value.type"
+      >
+        {{ message.value.message }}
       </v-snackbar>
     </v-app>
   </v-theme-provider>
 </template>
 
 <script lang="ts" setup>
-import { ref, inject, onMounted } from "vue";
+import { ref, onMounted } from "vue";
+import { loadingData } from "./plugins/loading";
+import { messagesData } from "./plugins/message";
 const theme = ref("light");
 function toggleDarkTheme(value: boolean) {
   theme.value = value ? "dark" : "light";
@@ -39,6 +47,4 @@ onMounted(() => {
     toggleDarkTheme(mediaQuery.matches)
   );
 });
-const loader: any = inject("loader");
-const error: any = inject("error");
 </script>

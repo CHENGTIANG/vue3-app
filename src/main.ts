@@ -4,8 +4,8 @@ import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
 import router from "./plugins/router";
-import loader from "./plugins/loader";
-import error from "./plugins/error";
+import loading from "./plugins/loading";
+import message from "./plugins/message";
 import i18n from "./plugins/i18n";
 loadFonts();
 
@@ -13,6 +13,6 @@ createApp(App)
   .use(vuetify)
   .use(router)
   .use(i18n)
-  .use(loader)
-  .use(error)
+  .use(loading)
+  .use(message)
   .mount("#app");
