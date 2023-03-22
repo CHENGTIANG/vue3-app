@@ -7,7 +7,6 @@
         z-index="2500"
         :model-value="loadingData.loading"
         persistent
-        contained
         class="align-center justify-center"
       >
         <v-card>
