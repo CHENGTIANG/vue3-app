@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-2">
+  <v-container>
     <v-carousel :show-arrows="false" height="min(40vw, 40vh)" class="mb-2">
       <v-carousel-item
         v-for="(item, i) in items"
@@ -35,7 +35,7 @@
         </v-img>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts" setup>

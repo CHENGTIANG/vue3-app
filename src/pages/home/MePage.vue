@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <v-list class="mb-2">
       <v-list-item prepend-avatar="https://picsum.photos/200/200" title="Grant">
       </v-list-item>
@@ -15,8 +15,7 @@
         <v-list-item-title>About</v-list-item-title>
       </v-list-item>
     </v-list>
-    <div class="pa-2">
-      <v-btn block @click="$router.replace('/signin')">Sign Out</v-btn>
-    </div>
-  </div>
+
+    <v-btn block @click="$router.replace('/signin')">Sign Out</v-btn>
+  </v-container>
 </template>
