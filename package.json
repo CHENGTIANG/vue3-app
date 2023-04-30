@@ -19,20 +19,20 @@
     "vue": "^3.2.47",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6",
-    "vuetify": "^3.1.13",
+    "vuetify": "^3.2.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@capacitor/cli": "^4.7.3",
     "@types/node": "^18.15.11",
     "@types/webfontloader": "^1.6.35",
-    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue": "^4.2.1",
     "autoprefixer": "^10.4.14",
-    "sass": "^1.60.0",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.3",
     "vite-plugin-vuetify": "^1.0.2",
-    "vue-tsc": "^1.2.0"
+    "vue-tsc": "^1.6.1"
   },
   "license": "MIT"
 }
