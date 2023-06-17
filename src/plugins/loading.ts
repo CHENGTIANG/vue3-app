@@ -10,7 +10,7 @@ const loadingKey = Symbol("loading");
 type ShowLoading = (message?: string) => void;
 type HideLoading = () => void;
 export default {
-  install(app: App, options: { message?: string }) {
+  install(app: App, options?: { message?: string }) {
     const showLoading: ShowLoading = (message?: string) => {
       loadingData.loading = true;
       loadingData.message = message || options?.message;

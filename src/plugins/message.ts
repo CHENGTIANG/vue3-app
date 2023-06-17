@@ -16,7 +16,7 @@ type ShowErrorMessage = (error: Error) => void;
 type GetErrorMessage = (error: Error) => string;
 
 export default {
-  install(app: App, options: { duration?: number; location: string }) {
+  install(app: App, options?: { duration?: number; location: string }) {
     const showErrorMessage: ShowErrorMessage = (error: Error) => {
       const message = ref({
         location: options?.location,
